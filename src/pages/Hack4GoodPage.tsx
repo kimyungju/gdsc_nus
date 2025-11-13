@@ -8,27 +8,27 @@ export default function Hack4GoodPage() {
     {
       title: "Real Impact",
       description: "Tackle real challenges faced by underserved communities and make a tangible difference",
-      image: "/src/assets/events/realimpact.png",
+      image: "/events/realimpact.png",
     },
     {
       title: "Expert Mentors",
       description: "Learn from experienced mentors from Google, Grab, and other tech companies",
-      image: "/src/assets/events/expertmentors.png",
+      image: "/events/expertmentors.png",
     },
     {
       title: "Win Prizes",
       description: "Win prizes and mentorship opportunities",
-      image: "/src/assets/events/winprizes.png", 
+      image: "/events/winprizes.png", 
     },
     {
       title: "Collaborate",
       description: "Collaborate with like-minded changemakers",
-      image: "/src/assets/events/collaborate.png", 
+      image: "/events/collaborate.png", 
     },
     {
       title: "Build Portfolio",
       description: "Build your portfolio with purpose-driven projects",
-      image: "/src/assets/events/portfolio.png", 
+      image: "/events/portfolio.png", 
     },
   ];
 
@@ -55,7 +55,7 @@ export default function Hack4GoodPage() {
               <h2 className="text-2xl font-bold mb-4">About</h2>
               <div className="space-y-4 text-slate-700 leading-relaxed">
                 <p>
-                  Hack4Good is DSC NUS's premier social impact hackathon, bringing together
+                  Hack4Good is Developer Group @ NUS Computing's premier social impact hackathon, bringing together
                   students, industry mentors, and community partners to create technology
                   solutions for social and environmental challenges.
                 </p>
@@ -101,7 +101,7 @@ export default function Hack4GoodPage() {
           <div className="flex flex-col items-center">
             <div className="w-full rounded-2xl overflow-hidden shadow-lg mb-4">
               <img
-                src="/src/assets/events/rightpicture.png" 
+                src="/events/rightpicture.png" 
                 alt="Previous Winners"
                 className="w-full h-auto object-cover"
               />
