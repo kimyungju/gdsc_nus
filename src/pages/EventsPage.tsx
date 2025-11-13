@@ -7,31 +7,31 @@ const pastEvents = [
   {
     year: "AY 24/25",
     yearParam: "ay2425",
-    image: "/src/assets/events/ay2425.jpg",
+    image: "events/ay2425.jpg",
     clickable: true,
   },
   {
     year: "AY 22/23",
     yearParam: "ay2223",
-    image: "/src/assets/events/ay2223.png",
+    image: "/events/ay2223.png",
     clickable: false,
   },
   {
     year: "AY 20/21",
     yearParam: "ay2021",
-    image: "/src/assets/events/ay2021.png",
+    image: "/events/ay2021.png",
     clickable: false,
   },
   {
     year: "AY 23/24",
     yearParam: "ay2324",
-    image: "/src/assets/events/ay2324.jpg",
+    image: "/events/ay2324.jpg",
     clickable: false,
   },
   {
     year: "AY 21/22",
     yearParam: "ay2122",
-    image: "/src/assets/events/ay2122.png",
+    image: "events/ay2122.png",
     clickable: false,
   },
 ];

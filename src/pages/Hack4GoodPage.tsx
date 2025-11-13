@@ -8,27 +8,27 @@ export default function Hack4GoodPage() {
     {
       title: "Real Impact",
       description: "Tackle real challenges faced by underserved communities and make a tangible difference",
-      image: "/src/assets/events/realimpact.png",
+      image: "/events/realimpact.png",
     },
     {
       title: "Expert Mentors",
       description: "Learn from experienced mentors from Google, Grab, and other tech companies",
-      image: "/src/assets/events/expertmentors.png",
+      image: "/events/expertmentors.png",
     },
     {
       title: "Win Prizes",
       description: "Win prizes and mentorship opportunities",
-      image: "/src/assets/events/winprizes.png", 
+      image: "/events/winprizes.png", 
     },
     {
       title: "Collaborate",
       description: "Collaborate with like-minded changemakers",
-      image: "/src/assets/events/collaborate.png", 
+      image: "/events/collaborate.png", 
     },
     {
       title: "Build Portfolio",
       description: "Build your portfolio with purpose-driven projects",
-      image: "/src/assets/events/portfolio.png", 
+      image: "/events/portfolio.png", 
     },
   ];
 
