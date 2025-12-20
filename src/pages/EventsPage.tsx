@@ -5,22 +5,16 @@ import DontMissOutSection from "../components/DontMissOutSection";
 
 const pastEvents = [
   {
-    year: "AY 24/25",
-    yearParam: "ay2425",
-    image: "events/ay2425.jpg",
+    year: "AY 25/26",
+    yearParam: "ay2526",
+    image: "/events/ay2526.jpg",
     clickable: true,
   },
   {
-    year: "AY 22/23",
-    yearParam: "ay2223",
-    image: "/events/ay2223.png",
-    clickable: false,
-  },
-  {
-    year: "AY 20/21",
-    yearParam: "ay2021",
-    image: "/events/ay2021.png",
-    clickable: false,
+    year: "AY 24/25",
+    yearParam: "ay2425",
+    image: "/events/ay2425.jpg",
+    clickable: true,
   },
   {
     year: "AY 23/24",
@@ -29,9 +23,21 @@ const pastEvents = [
     clickable: false,
   },
   {
+    year: "AY 22/23",
+    yearParam: "ay2223",
+    image: "/events/ay2223.png",
+    clickable: false,
+  },
+  {
     year: "AY 21/22",
     yearParam: "ay2122",
-    image: "events/ay2122.png",
+    image: "/events/ay2122.png",
+    clickable: false,
+  },
+  {
+    year: "AY 20/21",
+    yearParam: "ay2021",
+    image: "/events/ay2021.png",
     clickable: false,
   },
 ];
@@ -120,19 +126,10 @@ export default function EventsPage() {
         <h2 className="text-2xl font-bold mb-8">Past Events</h2>
 
         <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {pastEvents.slice(0, 3).map((event, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pastEvents.map((event, i) => (
               <EventCard key={i} event={event} />
             ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="md:col-start-1 md:col-end-2 md:translate-x-1/2">
-              <EventCard event={pastEvents[3]} />
-            </div>
-            <div className="md:col-start-3 md:col-end-4 md:-translate-x-1/2">
-              <EventCard event={pastEvents[4]} />
-            </div>
           </div>
         </div>
 
