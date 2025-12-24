@@ -28,8 +28,8 @@ function Hero() {
     <section id="home" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
         <div>
-          <h1 className="text-5xl tracking-tight md:text-7xl lg:text-5xl">
-            <span className="bg-linear-to-r from-blue-500 via-emerald-500 to-amber-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl lg:text-5xl font-bold tracking-[-0.04em] leading-[1.05]">
+            <span className="bg-[linear-gradient(90deg,#4285F4_0%,#34A853_35%,#FBBC05_70%,#EA4335_100%)] bg-clip-text text-transparent">
               Build. Learn. Connect
             </span>
           </h1>
