@@ -19,12 +19,40 @@ export default function ProjectDetailsPage() {
     <div className="min-h-dvh bg-white text-slate-900">
       <SiteHeader />
       <main className="mx-auto max-w-3xl px-4 py-16">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
-          {project.title}
-        </h1>
-        <p className="mt-6 text-base leading-relaxed text-slate-700">
-          {project.description}
-        </p>
+        {/* Hero Section */}
+        <div className="mb-12 rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:gap-8">
+            {/* Logo */}
+            <div className="flex-shrink-0 w-full md:w-36 flex items-center justify-center">
+              <div className="w-full max-w-36 aspect-square rounded-xl border border-slate-200 bg-slate-50 p-4 flex items-center justify-center">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+            {/* Text Content */}
+            <div className="flex-1 max-w-2xl">
+              <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+                {project.title}
+              </h1>
+              <p className="mt-4 text-base leading-relaxed text-slate-700">
+                {project.summary}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* About Section */}
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold text-slate-900 mb-6">
+            About
+          </h2>
+          <p className="text-base leading-7 text-slate-700 max-w-2xl">
+            {project.description}
+          </p>
+        </section>
 
         {similarProjects.length > 0 && (
           <section className="mt-16 border-t border-slate-200 pt-10">
