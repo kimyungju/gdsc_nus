@@ -209,18 +209,16 @@ function Accordion({
       >
         <span className="font-bold text-base">{title}</span>
         <span
-          className={`text-2xl font-light transition-transform ${
-            open ? "rotate-90" : ""
-          }`}
+          className={`text-2xl font-light transition-transform ${open ? "rotate-90" : ""
+            }`}
         >
           ›
         </span>
       </button>
 
       <div
-        className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
-          open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="bg-white px-6 py-5 border-x border-b border-slate-200">
           {children}
@@ -305,83 +303,54 @@ function Community() {
 }
 
 /* --------------------------- EVENTS --------------------------- */
+/* Edited upcoming events (Hack4Good) in the about page */
 function Events() {
-  const upcoming = [
-    {
-      title: "Android Dev Workshop",
-      date: "Oct 28, 2024",
-      tag: "Workshop",
-      description:
-        "Join us for a hands-on workshop on building your first Android application with Kotlin.",
-      color: "rose",
-      icon: "📅",
-    },
-    {
-      title: "Cloud Study Jam",
-      date: "Nov 15, 2024",
-      tag: "Study Jam",
-      description:
-        "A deep dive into Google Cloud Platform services. Perfect for beginners and experts alike.",
-      color: "emerald",
-      icon: "☁️",
-    },
-    {
-      title: "Tech Talk: AI & ML",
-      date: "Dec 05, 2024",
-      tag: "Tech Talk",
-      description:
-        "Listen to industry experts discuss the latest trends and breakthroughs in AI and Machine Learning.",
-      color: "amber",
-      icon: "🔊",
-    },
-  ];
-
   return (
     <section id="events" className="mx-auto max-w-6xl px-4 py-10">
       <h2 className="text-2xl font-semibold text-center">Upcoming Events</h2>
-      <div className="mt-8 grid gap-6 md:grid-cols-3">
-        {upcoming.map((e, i) => {
-          const colorClasses =
-            e.color === "rose"
-              ? "bg-rose-100 text-rose-600"
-              : e.color === "emerald"
-              ? "bg-emerald-100 text-emerald-600"
-              : "bg-amber-100 text-amber-600";
-
-          return (
-            <article
-              key={i}
-              className="rounded-2xl border border-slate-100 bg-white p-6 shadow-lg"
+      <div className="mt-8 flex justify-center">
+        <article className="rounded-2xl border border-slate-100 bg-white p-6 shadow-lg max-w-md w-full">
+          <div className="flex items-start gap-4">
+            <div
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-100 text-rose-600 shrink-0"
+              aria-hidden
             >
-              <div className="flex items-start gap-4">
-                <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-full ${colorClasses} shrink-0`}
-                  aria-hidden
-                >
-                  <span className="text-xl">{e.icon}</span>
-                </div>
-                <div className="flex-1">
-                  <div className="text-xs font-semibold text-slate-400">
-                    {e.date}
-                  </div>
-                  <h3 className="mt-2 text-lg font-semibold text-slate-900">
-                    {e.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-600">{e.description}</p>
-                </div>
+              <span className="text-xl">🚀</span>
+            </div>
+            <div className="flex-1">
+              <div className="text-xs font-semibold text-slate-400">
+                12 – 31 January 2026
               </div>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">
+                Hack4Good
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Work in teams to develop impactful solutions for real-world
+                challenges faced by Non-Profit Organisations (NPOs), all while
+                learning, innovating, and connecting with like-minded peers.
+              </p>
+            </div>
+          </div>
 
-              <div className="mt-6">
-                <a
-                  href="#register"
-                  className="block w-full rounded-full bg-blue-500 px-6 py-3 text-center text-sm font-semibold text-white shadow hover:bg-blue-400"
-                >
-                  Register Now
-                </a>
-              </div>
-            </article>
-          );
-        })}
+          <div className="mt-6 flex flex-col gap-3">
+            <a
+              href="https://forms.office.com/r/ZC4C6pLAVd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full rounded-full bg-blue-500 px-6 py-3 text-center text-sm font-semibold text-white shadow hover:bg-blue-400"
+            >
+              Register (Form 1)
+            </a>
+            <a
+              href="https://bit.ly/4rYnvdZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full rounded-full bg-emerald-500 px-6 py-3 text-center text-sm font-semibold text-white shadow hover:bg-emerald-400"
+            >
+              Register (Form 2)
+            </a>
+          </div>
+        </article>
       </div>
     </section>
   );
@@ -491,9 +460,8 @@ function Timeline() {
                 className="flex flex-col items-start md:flex-row md:items-center"
               >
                 <div
-                  className={`md:w-1/2 md:px-8 ${
-                    isLeft ? "md:pr-8 md:flex md:justify-end" : "md:pl-8"
-                  } w-full`}
+                  className={`md:w-1/2 md:px-8 ${isLeft ? "md:pr-8 md:flex md:justify-end" : "md:pl-8"
+                    } w-full`}
                 >
                   {isLeft && (
                     <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
@@ -515,9 +483,8 @@ function Timeline() {
                 </div>
 
                 <div
-                  className={`md:w-1/2 md:px-8 ${
-                    !isLeft ? "md:pl-8 md:flex md:justify-start" : "md:pr-8"
-                  } w-full mt-4 md:mt-0`}
+                  className={`md:w-1/2 md:px-8 ${!isLeft ? "md:pl-8 md:flex md:justify-start" : "md:pr-8"
+                    } w-full mt-4 md:mt-0`}
                 >
                   {!isLeft && (
                     <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-5 shadow">
