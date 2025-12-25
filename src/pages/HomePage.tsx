@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
