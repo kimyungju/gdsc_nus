@@ -10,6 +10,8 @@ export default function HomePage() {
       <main>
         <Hero />
         <About />
+        <Projects />
+        <Events />
         <Timeline />
         <Testimonials />
         <Partners />
@@ -225,79 +227,7 @@ function Accordion({
   );
 }
 
-/* --------------------------- COMMUNITY --------------------------- */
-function Community() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
 
-  const items = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1558021211-6d1403321394?q=80&w=1200&auto=format&fit=crop",
-    },
-  ];
-
-  const scrollByOne = (dir: "left" | "right") => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLDivElement>("[data-card]");
-    const step = card ? card.clientWidth + 24 : el.clientWidth / 3;
-    el.scrollBy({ left: dir === "left" ? -step : step, behavior: "smooth" });
-  };
-
-  return (
-    <section id="community" className="relative mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-center text-3xl font-semibold tracking-tight text-slate-800 md:text-4xl">
-        Our Community In Action
-      </h2>
-
-      <div className="relative mt-8">
-        <button
-          aria-label="Previous"
-          onClick={() => scrollByOne("left")}
-          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-slate-200 bg-white/90 p-3 shadow-sm backdrop-blur hover:bg-white"
-        >
-          ←
-        </button>
-        <button
-          aria-label="Next"
-          onClick={() => scrollByOne("right")}
-          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-slate-200 bg-white/90 p-3 shadow-sm backdrop-blur hover:bg-white"
-        >
-          →
-        </button>
-
-        <div
-          ref={scrollerRef}
-          className="scroll-smooth overflow-x-auto px-12 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-        >
-          <div className="grid grid-flow-col gap-6 snap-x snap-mandatory auto-cols-[85%] md:auto-cols-[calc((100%-24px*2)/3)]">
-            {items.map((it) => (
-              <div
-                key={it.id}
-                data-card
-                className="snap-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md"
-              >
-                <img
-                  src={it.src}
-                  alt="Community"
-                  className="h-64 w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* --------------------------- EVENTS --------------------------- */
 /* Edited upcoming events (Hack4Good) in the about page */
