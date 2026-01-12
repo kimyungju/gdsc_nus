@@ -357,8 +357,31 @@ function Timeline() {
         Here's how we work with our partners from idea to launch.
       </p>
 
-      <div className="relative mt-8">
-        <div className="hidden md:block absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-200" />
+      {/* Mobile Layout (Vertical, Numbered) */}
+      <div className="md:hidden mt-8 relative pl-2">
+        {/* Vertical Guide Line */}
+        <div className="absolute left-[19px] top-2 bottom-6 w-px bg-slate-200" />
+
+        <div className="space-y-8">
+          {steps.map((step, i) => (
+            <div key={i} className="relative flex gap-5">
+              {/* Number Badge */}
+              <div className="z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-bold ring-4 ring-white transition-transform hover:scale-110">
+                {i + 1}
+              </div>
+
+              <div className="pt-1">
+                <h3 className="font-semibold text-slate-900 text-lg">{step.title}</h3>
+                <p className="mt-2 text-slate-600 leading-relaxed text-sm">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout (Alternating) */}
+      <div className="hidden md:block relative mt-8">
+        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-200" />
         <div className="space-y-12">
           {steps.map((step, i) => {
             const isLeft = i % 2 === 0;
