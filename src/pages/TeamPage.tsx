@@ -353,6 +353,13 @@ const internalTeams = {
       github: "https://github.com/moopiggus",
     },
     {
+      name: "Kim Yungju",
+      role: "Technology",
+      img: "/team/yungju.png",
+      linkedIn: "https://www.linkedin.com/in/yungju",
+      github: "NA",
+    },
+    {
       name: "Glory Lion",
       role: "Technology",
       img: "/team/glorylion.png",

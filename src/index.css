@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/* Partner Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.partner-marquee-content {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  will-change: transform;
+}
