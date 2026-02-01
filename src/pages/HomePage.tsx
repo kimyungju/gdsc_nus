@@ -485,18 +485,33 @@ function Partners() {
     { src: "/actionforsingapore.png", alt: "Action for Singapore Dogs" },
   ];
 
+  // Duplicate logos for seamless loop
+  const duplicatedLogos = [...logos, ...logos];
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-10 bg-slate-50">
-      <h2 className="text-2xl font-semibold text-center">Our Partners</h2>
-      <div className="mt-8 flex items-center justify-between gap-6 overflow-x-auto px-4">
-        {logos.map((l, i) => (
-          <div
-            key={i}
-            className="flex shrink-0 items-center justify-center px-4"
-          >
-            <img src={l.src} alt={l.alt} className="h-16 object-contain" />
+      <h2 className="text-2xl font-semibold text-center mb-8">Our Partners</h2>
+      <div className="relative overflow-hidden">
+        {/* Gradient overlays for smooth edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+        
+        <div className="partner-marquee">
+          <div className="partner-marquee-content">
+            {duplicatedLogos.map((l, i) => (
+              <div
+                key={i}
+                className="flex shrink-0 items-center justify-center px-8 md:px-12"
+              >
+                <img 
+                  src={l.src} 
+                  alt={l.alt} 
+                  className="h-16 md:h-20 object-contain" 
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
