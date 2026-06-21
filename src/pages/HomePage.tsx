@@ -53,7 +53,7 @@ function Hero() {
           <div className="overflow-hidden rounded-3xl w-full max-w-md">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-              alt="© 2025 DG NUS. All rights reserved."
+              alt="Developer Group @ NUS Computing members collaborating"
               className="h-80 w-full object-cover"
             />
           </div>

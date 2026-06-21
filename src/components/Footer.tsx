@@ -8,7 +8,7 @@ export default function Footer() {
             className="font-inter font-normal"
             style={{ color: "var(--color-grey-2570, #3C4043B2)" }}
           >
-            © 2025 Developer Group @ NUS Computing. All rights reserved.
+            © 2026 Developer Group @ NUS Computing. All rights reserved.
           </div>
         </div>
 
