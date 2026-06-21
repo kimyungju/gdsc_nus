@@ -1,8 +1,28 @@
 import { useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
+import Avatar from "../components/Avatar";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
+/**
+ * Normalises a social link from the team data into a usable URL, or null when
+ * there is no real link. The data uses "NA" for missing links and sometimes
+ * omits the protocol (e.g. "www.linkedin.com/...") or only has the bare
+ * homepage ("https://github.com"), all of which should not render a link.
+ */
+function normaliseSocialUrl(value: string | undefined): string | null {
+  if (!value) return null;
+  const v = value.trim();
+  if (!v || v.toUpperCase() === "NA") return null;
+  const bare = v
+    .replace(/^https?:\/\//i, "")
+    .replace(/^www\./i, "")
+    .replace(/\/+$/, "")
+    .toLowerCase();
+  // bare homepage placeholders carry no personal profile
+  if (bare === "github.com" || bare === "linkedin.com") return null;
+  return /^https?:\/\//i.test(v) ? v : `https://${v}`;
+}
 
 type Member = {
   name: string;
@@ -1119,38 +1139,48 @@ export default function TeamPage() {
 
 /* ====================== CARD ====================== */
 function MemberCard({ name, role, img, linkedIn, github }: Member) {
+  const linkedInUrl = normaliseSocialUrl(linkedIn);
+  const githubUrl = normaliseSocialUrl(github);
+
   return (
     <div className="flex flex-col items-center rounded-xl bg-slate-50 p-4 border border-slate-200 shadow hover:shadow-md transition">
-      <img
+      <Avatar
         src={img}
         alt={name}
+        name={name}
         className="h-24 w-24 rounded-full object-cover border border-slate-300"
       />
       <h3 className="mt-3 font-medium text-slate-900">{name}</h3>
       <p className="text-xs text-slate-600">{role}</p>
 
-      <div className="flex gap-4 mt-3 text-lg text-slate-400">
-        <a
-          href={linkedIn ?? "https://linkedin.com"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 transition"
-          aria-label={`${name} LinkedIn`}
-          title="LinkedIn"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href={github ?? "https://github.com"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-black transition"
-          aria-label={`${name} GitHub`}
-          title="GitHub"
-        >
-          <FaGithub />
-        </a>
+      {(linkedInUrl || githubUrl) && (
+        <div className="flex gap-4 mt-3 text-lg text-slate-400">
+          {linkedInUrl && (
+            <a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 transition"
+              aria-label={`${name} LinkedIn`}
+              title="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+          )}
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-black transition"
+              aria-label={`${name} GitHub`}
+              title="GitHub"
+            >
+              <FaGithub />
+            </a>
+          )}
         </div>
+      )}
     </div>
   );
 }

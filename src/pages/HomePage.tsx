@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
+import Avatar from "../components/Avatar";
 
 export default function HomePage() {
   return (
@@ -460,9 +461,10 @@ function Testimonials() {
           >
             <p className="text-sm italic text-slate-600">“{it.quote}”</p>
             <div className="mt-4 flex items-center gap-3">
-              <img
+              <Avatar
                 src={it.avatar}
                 alt={it.name}
+                name={it.name}
                 className="h-10 w-10 rounded-full object-cover"
               />
               <div>
