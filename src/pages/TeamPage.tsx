@@ -227,18 +227,11 @@ const internalTeams = {
       github: "NA",
     },
     {
-      name: "Arnav Kamath",
+      name: "Kim Yungju",
       role: "Head of Technology",
-      img: "/team/arnav.png",
-      linkedIn: "linkedin.com/in/arnav-kamath4",
-      github: "https://github.com/AK-matrix",
-    },
-    {
-      name: "Nathan Loo",
-      role: "Head of Technology",
-      img: "/team/nathan.png",
-      linkedIn: "https://www.linkedin.com/in/nathanloo/",
-      github: "https://github.com/natlv/",
+      img: "/team/yungju.png",
+      linkedIn: "https://www.linkedin.com/in/yungju",
+      github: "NA",
     },
     {
       name: "Kee Zhen Xian",
@@ -351,13 +344,6 @@ const internalTeams = {
       img: "/team/huien.png",
       linkedIn: "https://linkedin.com/in/hui-en-tay/",
       github: "https://github.com/moopiggus",
-    },
-    {
-      name: "Kim Yungju",
-      role: "Technology",
-      img: "/team/yungju.png",
-      linkedIn: "https://www.linkedin.com/in/yungju",
-      github: "NA",
     },
     {
       name: "Glory Lion",
