@@ -82,4 +82,49 @@ export const projects: Project[] = [
     videoUrl: "https://youtu.be/WxDuUCiMrf8",
     technologies: [],
   },
+  {
+    slug: "edible-garden",
+    title: "Edible Garden",
+    summary:
+      "Supports inclusive urban farming, community education, and productive edible gardens across Singapore.",
+    organisationContext:
+      "Edible Garden is a social enterprise that combines urban farming with a social mission. It trains and employs farmers with autism and other special abilities, supplies edible flowers and produce, runs farm tours and workshops, designs and maintains edible gardens, and uses therapeutic horticulture to support communities.",
+    problemStatement:
+      "Orders arrive through several channels, including WhatsApp and purchase orders, and staff manually consolidate them, check what is available at the farms, and enter the same information into spreadsheets and accounting software. The organisation also wants clearer website navigation and better ways for garden communities to communicate and share feedback.",
+    projectGoals:
+      "The project aims to streamline order capture and fulfilment by extracting order details into a consistent format, matching requests with available produce, and reducing duplicate data entry. It may also support clearer website navigation and a shared space for community updates and feedback.",
+    image: "/edible-garden-city.png",
+    videoUrl: "",
+    technologies: [],
+  },
+  {
+    slug: "mental-act",
+    title: "Mental ACT",
+    summary:
+      "Provides mental health services and programmes for Singapore's South Asian community.",
+    organisationContext:
+      "Mental ACT is a non-profit organisation that provides advocacy, care, and training for Singapore's South Asian community. Its work seeks to reduce stigma and empower individuals to take active steps towards better mental well-being.",
+    problemStatement:
+      "Volunteer information is currently collected through Google Forms, stored in spreadsheets, and coordinated through WhatsApp. As the organisation expands into fundraising and counselling, it also needs centralised donor, staff, enquiry, and case-management workflows with useful operational statistics.",
+    projectGoals:
+      "The project aims to create a central platform for managing volunteers, donors, staff operations, counselling enquiries, counsellor assignments, and case progress. The platform should reduce manual coordination, support bulk communications, and provide clear activity statistics.",
+    image: "/mental-act.png",
+    videoUrl: "",
+    technologies: [],
+  },
+  {
+    slug: "childrens-society",
+    title: "Children's Society",
+    summary:
+      "Protects and nurtures children and youth, especially those in vulnerable circumstances.",
+    organisationContext:
+      "Children's Society supports vulnerable children, youth, and families through direct services and advocacy. Its mission is to bring relief and happiness to children in need while promoting their safety and well-being.",
+    problemStatement:
+      "The organisation's donation website needs a clearer and more interactive experience, including donor recognition and Stripe payments. Its current backend data can also record incomplete purchases, which creates mismatches between transaction data and exported reports.",
+    projectGoals:
+      "The project aims to improve the donation journey, add donor-leaderboard and Stripe payment capabilities, and make transaction records and reports consistent even when a payment is not completed. A contact-support chatbot may be considered after these core flows are addressed.",
+    image: "/childrens-society.webp",
+    videoUrl: "",
+    technologies: [],
+  },
 ];
