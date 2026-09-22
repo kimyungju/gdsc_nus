@@ -27,17 +27,18 @@ export const projects: Project[] = [
     technologies: [],
   },
   {
-    slug: "action-for-singapore-dogs",
-    title: "Action for Singapore Dogs",
-    summary: "Rescuing, fostering, and rehoming stray and abandoned dogs in Singapore",
+    slug: "acres",
+    title: "ACRES",
+    summary:
+      "Protecting wildlife through rescue, rehabilitation, education, and advocacy.",
     organisationContext:
-      "Action for Singapore Dogs (ASD) is a registered charity established in December 2000, dedicated to improving the welfare of stray and abandoned dogs in Singapore through a strict no-kill approach. Their work spans rescue, rehabilitation, fostering, adoption, sterilisation, public education, fundraising, and volunteer support.",
+      "An animal protection charity working to create a society where animals are treated with compassion and respect as sentient beings. Its work includes wildlife rescue and rehabilitation, tackling wildlife crime, public education and animal-welfare advocacy.",
     problemStatement:
       "Managing shelter operations involves many moving parts, including dog profiles, medical histories, vet bills, sponsorship records, adoption status, shelter capacity, and volunteer access. When this information is stored across scattered spreadsheets or manual records, it becomes difficult to search, update, and share securely.",
     projectGoals:
       "We developed FetchIt, a Dog Shelter Management System that centralises dog records, medical and adoption information, sponsorship details, and shelter data. With role-based access and an interactive dashboard, ASD can securely manage information while tracking medical expenses, adoption rates, sponsorship coverage, and shelter occupancy more easily.",
-    image: "/actionforsingapore.png",
-    videoUrl: "https://youtu.be/zsNt_sJ4UrE",
+    image: "/acres-logo.jpg",
+    videoUrl: "",
     technologies: [],
   },
   {

@@ -486,7 +486,7 @@ function Partners() {
     { src: "/siloamxperience.png", alt: "SiloamXperience" },
     { src: "/itsraining.png", alt: "ItsRainingRaincoats" },
     { src: "/caringforlife.png", alt: "Caring for Life" },
-    { src: "/actionforsingapore.png", alt: "Action for Singapore Dogs" },
+    { src: "/acres-logo.jpg", alt: "ACRES" },
   ];
 
   // Duplicate logos for seamless loop
