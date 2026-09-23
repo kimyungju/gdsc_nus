@@ -441,7 +441,7 @@ export const externalTeams = {
   "Caring for Life": [
     {
       "name": "Kenneth Christopher Hendra",
-      "role": "Head of Product",
+      "role": "Head of Tech",
       "img": "/team/ay26-27/kenneth-christopher-hendra-14.jpg",
       "linkedIn": "https://www.linkedin.com/in/kenneth-hendra/"
     },
@@ -477,13 +477,13 @@ export const externalTeams = {
     },
     {
       "name": "Andrew Raynard Liharja",
-      "role": "Product Associate",
+      "role": "Tech Associate",
       "img": "/team/ay26-27/andrew-raynard-liharja-16.jpg",
       "linkedIn": "www.linkedin.com/in/andrewraynard"
     },
     {
       "name": "Natalia Elyssa Chan",
-      "role": "Product Associate",
+      "role": "Tech Associate",
       "img": "/team/ay26-27/natalia-elyssa-chan-16.jpg",
       "linkedIn": "https://www.linkedin.com/in/natalia-elyssa-chan"
     }
